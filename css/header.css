@@ -1,0 +1,108 @@
+header { /* Règles générales de l'en-tête du site */
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    transition: 0.3s;
+    background-color: #ccc;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+header * { /* Règles s'appliquant sur tous les éléments de l'en-tête */
+    text-align: end;
+    flex-direction: row;
+    margin: 0;
+    padding: 0;
+}
+
+.recherche {
+    display: flex;
+    align-items: center;
+}
+
+.recherche * {
+    text-align: justify;
+    padding: 3px;
+}
+
+.logout {
+    text-align: center;
+}
+.logout * {
+    padding: 3px;
+}
+
+.logo {
+    display: flex;
+    padding: 0;
+}
+
+.logo * {
+    height: 70px;
+    display: flex;
+    align-items: center;
+}
+
+.icone {
+    width: 40px;
+    height: 40px;
+}
+#logo-R {
+    max-height: 50px;
+}
+
+/* Menu déroulant */
+
+#icone-menu-principal { /* Agrandissement de la zone qui permet de faire apparaître le menu */
+    padding: 10px;
+    padding-left: 270px;
+}
+
+.logout {
+    padding-left: 10px;
+}
+
+.menu-deroulant { /* Le menu est positionné en dehors de l'affichage par sa propre largeur (300px) */
+    background-color: #ccc;
+    position: absolute;
+    padding: 10px;
+    right: -300px;
+    top: 0;
+    width: 300px;
+    height: fit-content;
+    transition: 0.3s;
+    overflow: hidden;
+    text-align: end;
+    opacity: 0%;
+}
+
+.menu-deroulant * {
+    text-align: justify;
+}
+
+.menu-deroulant > ul > li > * > img { /* Ajoute un espace entre les icônes du menu et le texte */
+    padding-right: 10px;
+}
+
+#icone-menu-principal:hover + .menu-deroulant,  .menu-deroulant:hover{ /* La règle qui fait se s'afficher le menu */
+    right: 0px;
+    opacity: 100%;
+}
+
+.menu-deroulant ul {
+    display: flex;
+    flex-direction: column;
+}
+
+.menu-deroulant ul li {
+    margin: 5px;
+}
+
+.menu-deroulant ul li * {
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+}

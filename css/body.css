@@ -1,0 +1,242 @@
+.contenu {  /* Règles générales s'appliquant sur le corps de la page */
+    position:absolute;
+    top:0px;
+    left:0;
+    right: 0;
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-top:80px;
+    padding: 0;
+    padding-bottom: 55px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.contenu * {
+    margin:10px;
+
+}
+
+/* Règles spécifiques */
+
+.logo {
+    max-width: 500px;
+}
+
+.formulaire, .formulaire * {
+    display: flex;
+    align-items: center;
+}
+#liste-categories {
+    margin: 0px;
+    padding: 0px;
+}
+.liste-categories {
+    background-color: #000;
+    display: flex;
+    justify-content: flex-start;
+    width: 100%;
+    top:180px;
+    left:-1px;
+    right:-1px;
+}
+.categorie {
+    z-index: 0;
+    transition: 0.3s;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 20%;
+    height: 600px;
+}
+.categorie * {
+    transition: 0.3s;
+}
+.categorie:hover {
+    z-index: 1;
+    width: 30%;
+    opacity: 100%;
+}
+.categorie:hover * {
+    scale:120%;
+}
+.categorie:not(:hover) {
+    opacity: 50%;
+}
+.categorie > p {
+    text-shadow: 2px 2px 5px #000;
+    text-align: center;
+    left: -10%;
+    right: -10%;
+    font-size: 50px;
+}
+.liste-categories:not(:hover) .categorie {
+    opacity: 90%;
+}
+
+/* Images de fond pour le choix de catégorie */
+#categorie-citadines {
+    background-image: url('../images/citadines.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+#categorie-suvs {
+    background-image: url('../images/suvs.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+#categorie-utilitaires {
+    background-image: url('../images/utilitaires.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+#categorie-motos {
+    background-image: url('../images/motos.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+#categorie-poids-lourds {
+    background-image: url('../images/camions.jpg');
+    background-position: center;
+    background-size:cover;
+}
+
+.liste-voiture {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 5px;
+}
+
+.liste-voiture * {
+    margin: 5px;
+    padding: 0;
+}
+
+.voiture{
+    overflow: hidden;
+    border: 2px solid #f00;
+    display: flex;
+    flex-direction: row-reverse;
+    align-items: center;
+    height: 250px;
+    width: 600px;
+}
+
+.voiture *{
+    transition: 0.3s;
+    margin: 0px;
+    padding: 0px;
+}
+
+.voiture ul {
+    display: flex;
+    align-items: flex-end;
+    flex-direction: column;
+    justify-content:center;
+    width: 250px;
+    height: 250px;
+    z-index: 1;
+    margin-left: -50px;
+    background-color: #ccc;
+    clip-path: polygon(50px 0, 350px 0, 350px 350px, 0 350px);
+}
+
+.voiture:hover > ul {
+    background-color: #eee;
+}
+
+.voiture > ul > li{
+    text-align: end;
+    font-size: 18px;
+    padding: 8px;
+}
+
+.voiture > ul > li > a {
+    display: flex;
+    align-items: center;
+}
+
+.voiture > img {
+    width: 400px;
+    height: 250px;
+    object-fit: cover;
+}
+
+.voiture:hover > img {
+    scale: 105%;
+}
+
+.formulaire {
+    display: flex;
+    flex-direction: column;
+    border: 2px solid #000
+}
+
+.formulaire img {
+    max-width: 100px;
+    max-height: 100px;
+}
+
+.section-admin {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.section-admin * {
+    text-align: center;
+}
+
+.section-admin>* {
+    border: 3px solid #000;
+    width: 300px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.message-php {
+    font-family: 'consolas';
+}
+.details-voiture {
+    display: flex;
+    flex-direction: row;
+}
+.details-voiture > img{
+    max-width: 1000px;
+    height: auto;
+}
+.details-voiture > ul {
+    background-color: #ccc;
+}
+
+.section-compte {
+    display: flex;
+    align-items: center;
+}
+.icone {
+    width: 30px;
+    height: 30px;
+}
+
+#voir-tout {
+    border: 3px solid #f00;
+    padding: 20px;
+    font-size: 25px;
+    font-weight: 600;
+    transition: 0.2s;
+}
+#voir-tout:hover {
+    scale:110%;
+    border-color: #f80;
+}
