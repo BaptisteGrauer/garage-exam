@@ -1,20 +1,20 @@
 <?php
 // Ceci est le fichier de configuration pour ce site.
-// les variables ci-dessous sont à modifier et doivent correspondre à votre configuration actuelle.
+// Les variables ci-dessous sont à modifier et doivent correspondre à votre configuration actuelle.
 
 // Informations d'identification de la base de données :
 
     // Adresse du serveur MySQL :
-    $serveur = "localhost"; 
+    $serveur = "127.0.0.1"; 
 
     // Nom d'utilisateur du serveur MySQL :
-    $user = "garage_exam"; 
+    $user = "root"; 
 
     // Mot de passe utilisateur du serveur MySQL :
-    $mdp = "garage_exam"; 
+    $mdp = ""; 
 
     // Le nom de la base de donnée à utiliser :
-    $db = "garage_exam"; 
+    $db = "garage"; 
 
     // Ouverture de la session sur la base de données :
     $bdd = new mysqli($serveur, $user, $mdp, $db); 
@@ -27,6 +27,5 @@
 // Variables diverses : 
 
     // Chemin absolu du dossier images (pour ajout images voitures), à modifier avec celui de votre ordinateur/serveur.
-    $dir = "/var/www/garage_exam/images/voitures";
-
+    $dir = "C:/laragon/www/projet-garage/images/voitures/";
 ?>
